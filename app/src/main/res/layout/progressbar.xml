@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        />
+
+    <TextView
+        android:paddingTop="30dp"
+        android:id="@+id/message"
+        android:maxWidth="240dp"
+        android:text="Validating your details, Registration in progress , please be patient"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical"
+        />
+
+
+</LinearLayout>

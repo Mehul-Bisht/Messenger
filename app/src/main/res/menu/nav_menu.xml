@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/menu_new_message"
+        app:showAsAction="always"
+        android:title="New Message"
+        android:icon="@drawable/pencilv"
+        />
+
+    <item android:id="@+id/main_menu"
+        app:showAsAction="always"
+        android:title="Main Menu"
+        android:icon="@drawable/moremenu"
+        >
+
+        <menu>
+
+            <item android:id="@+id/Myaccount"
+                android:title="My account"
+                app:showAsAction="never"
+                android:icon="@drawable/ic_account_circle_black_24dp"
+                />
+
+            <item
+                android:id="@+id/select_color"
+                android:title="settings"
+                android:icon="@drawable/cog_outline"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/menu_sign_out"
+                android:title="Sign Out"
+                app:showAsAction="never"
+                android:icon="@drawable/signmeout" />
+
+
+        </menu>
+
+</item>
+
+</menu>

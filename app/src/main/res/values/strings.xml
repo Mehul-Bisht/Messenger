@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Messenger</string>
+    <string name="password_reset_email">
+    You will be sent a password reset email for your account at your registered email address. Kindly enter your registered email address below to proceed for resetting your password.
+    </string>
+
+</resources>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:id="@+id/constraint_layout2"
+    tools:context=".register_login.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/email_editext_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="16dp"
+        android:textColor="@color/color_white"
+        app:layout_constraintEnd_toEndOf="@+id/username_editext_register"
+        app:layout_constraintStart_toStartOf="@+id/username_editext_register"
+        app:layout_constraintTop_toBottomOf="@id/username_editext_register" />
+
+    <EditText
+        android:id="@+id/password_editext_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="16dp"
+        android:textColor="@color/color_white"
+        app:layout_constraintEnd_toEndOf="@+id/email_editext_register"
+        app:layout_constraintStart_toStartOf="@+id/email_editext_register"
+        app:layout_constraintTop_toBottomOf="@id/email_editext_register" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:background="@color/color_white"
+        android:text="Register"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_incorrect_details"
+    />
+
+    <EditText
+        android:id="@+id/username_editext_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="80dp"
+
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:paddingLeft="16dp"
+        android:textColor="@color/color_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectphoto_imageview_circle" />
+
+    <TextView
+        android:id="@+id/already_have_account_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Already have an account?"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/register_button"
+        app:layout_constraintStart_toStartOf="@+id/register_button"
+        app:layout_constraintTop_toBottomOf="@+id/register_button"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/select_image_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/select_photo_white"
+        android:text="Select Photo"
+
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/selectphoto_imageview_circle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="36dp"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/select_image_button"
+        app:layout_constraintEnd_toEndOf="@+id/select_image_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/select_image_button"
+        app:layout_constraintTop_toTopOf="@+id/select_image_button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/et_ShowHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Show"
+        android:textColor="@color/color_white"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/password_editext_register"
+        app:layout_constraintEnd_toEndOf="@+id/password_editext_register"
+        app:layout_constraintTop_toTopOf="@+id/password_editext_register" />
+
+    <TextView
+        android:id="@+id/tv_password_length"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Your password is too short right now"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/password_editext_register"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/password_editext_register"
+        app:layout_constraintTop_toBottomOf="@id/password_editext_register" />
+
+    <ImageView
+        android:id="@+id/alert_imageview"
+        android:layout_width="36dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="68dp"
+        android:src="@drawable/alert"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/register_button"
+        app:layout_constraintStart_toStartOf="@+id/register_button"
+        app:layout_constraintTop_toTopOf="@+id/register_button"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <TextView
+        android:id="@+id/tv_incorrect_details"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Please fill all details to register"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/tv_password_length"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_password_length"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password_length" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
